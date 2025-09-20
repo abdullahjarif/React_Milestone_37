@@ -1,16 +1,17 @@
-const products = [
-  "Xaomi",
-  "Samsung",
-  "Huawai",
-  "Realme",
-  "Oppo",
-  "Iphone",
-  "Itel",
-  "Nokia",
-  "OnePlus",
-];
-console.log(products);
+// const products = [
+//   "Xaomi",
+//   "Samsung",
+//   "Huawai",
+//   "Realme",
+//   "Oppo",
+//   "Iphone",
+//   "Itel",
+//   "Nokia",
+//   "OnePlus",
+// ];
+// console.log(products);
 
+// Product Details 
 const productsDetails = [
   {
     name: "Samsung s25",
@@ -54,15 +55,18 @@ const productsDetails = [
   },
 ];
 
-console.log(productsDetails);
-console.log(productsDetails[0]);
+// console.log(productsDetails);
+// console.log(productsDetails[0]);
 
-const arrColor = productsDetails.map(
-  (productsDetails) => productsDetails.color
-);
-console.log(arrColor);
+// const arrColor = productsDetails.map(
+//   (productsDetails) => productsDetails.color
+// );
+// console.log(arrColor);
 
-const productPrice = productsDetails.map(
-  (productsDetails) => productsDetails.price
-);
-console.log(productPrice);
+// const productPrice = productsDetails.map(
+//   (productsDetails) => productsDetails.price
+// );
+// console.log(productPrice);
+
+// foreach return kore na 
+productsDetails.forEach(product => console.log(product.brand));
