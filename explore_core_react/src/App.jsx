@@ -1,16 +1,105 @@
 import "./App.css";
 import ToDo from "./Todo";
+import FruitsList from "./fruitsList";
+import StudentList from "./studentList";
+import Library from "./library";
 
 function App() {
-  const time = 50;
+  // const time = 50;
+
+  // const fruits = [
+  //   "Banana",
+  //   "Apple",
+  //   "Orange",
+  //   "Jack-Fruit",
+  //   "Watermelon",
+  //   "Mango",
+  //   "Guava",
+  //   "Papaya",
+  // ];
+
+  const students = [
+    { id: 1, name: "Jarif", dept: "CSE", class: "Math", marks: 50 },
+    { id: 2, name: "Abir", dept: "CSE", class: "English", marks: 60 },
+    { id: 3, name: "Shaan", dept: "CSE", class: "Accounting", marks: 70 },
+    { id: 4, name: "Rafi", dept: "CSE", class: "Finance", marks: 80 },
+    { id: 5, name: "Rafsan", dept: "CSE", class: "Marketing", marks: 90 },
+  ];
+  
+  
+  const books = [
+    {
+      id: 1,
+      title: "Foundation",
+      category: "Science Fiction",
+      volume: 1,
+      author: "Isaac Asimov",
+      price: "$15.99",
+      issn: "1234-5678"
+    },
+    {
+      id: 2,
+      title: "The Hobbit",
+      category: "Fantasy",
+      volume: 2,
+      author: "J.R.R. Tolkien",
+      price: "$12.99",
+      issn: "2345-6789"
+    },
+    {
+      id: 3,
+      category: "Mystery",
+      title: "Murder on the Orient Express",
+      volume: 3,
+      author: "Agatha Christie",
+      price: "$10.99",
+      issn: "3456-7890"
+    },
+    {
+      id: 4,
+      category: "Horror",
+      title: "The Shining",
+      volume: 4,
+      author: "Stephen King",
+      price: "$14.99",
+      issn: "4567-8901"
+    },
+    {
+      id: 5,
+      category: "Romance",
+      title: "Pride and Prejudice",
+      volume: 5,
+      author: "Jane Austen",
+      price: "$9.99",
+      issn: "5678-9012"
+    },
+  ];
+
   return (
     <>
       <h1>Introduction to React</h1>
-      <ToDo task="Learn React" isDone={true} time={time}></ToDo>
+      
+
+      <Library books={books}></Library>
+
+      
+
+      {students.map((students) => (
+        //(function_loop_parameter.map((function_loop_parameter dynamically={dynamically}) => (return_value)))
+
+        <StudentList key={students.id} students={students}></StudentList>
+      ))}
+
+      {/* {fruits.map((fruits) => (
+        <FruitsList key={fruits} fruits={fruits}></FruitsList>
+      ))} */}
+
+      {/* <ToDo task="Learn React" isDone={true} time={time}></ToDo>
       <ToDo task="Learn Next" isDone={false}></ToDo>
       <ToDo task="Revise JS" isDone={true} time={time}></ToDo>
       <ToDo task="Complete React Milestone 1" isDone={true} time={time}></ToDo>
-      <ToDo task="Complete Node JS Milestone 1" isDone={false}></ToDo>
+      <ToDo task="Complete Node JS Milestone 1" isDone={false}></ToDo> */}
+
       {/* <Student></Student>
       <Developer name="Jarif" lang="Python (Django)"></Developer>
       <Developer name="Abir" lang="React JS"></Developer>
